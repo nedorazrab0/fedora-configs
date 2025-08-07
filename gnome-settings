@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+# gnome settings
+set -e
+
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.interface clock-show-date false
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+#gsettings set org.gnome.shell favorite-apps "['net.waterfox.waterfox.desktop', 'org.gnome.Console.desktop', 'org.gnome.Nautilus.desktop']"
+
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+#gsettings set org.gnome.desktop.background picture-uri /usr/share/backgrounds/gnome/adwaita-l.jpg
+#gsettings set org.gnome.desktop.background picture-uri-dark /usr/share/backgrounds/gnome/adwaita-l.jpg
+
+gsettings set org.gnome.desktop.privacy remove-old-trash-files true
+gsettings set org.gnome.desktop.privacy remove-old-temp-files true
+
+gsettings set org.gnome.nautilus.preferences show-directory-item-counts always
+gsettings set org.gnome.nautilus.preferences show-image-thumbnails always
+gsettings set org.gnome.nautilus.preferences recursive-search always
+
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+gsettings set org.gnome.desktop.peripherals.mouse speed 1.0
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 15
+
+gnome-extensions disable background-logo@fedorahosted.org
