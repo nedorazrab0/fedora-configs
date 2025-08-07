@@ -20,7 +20,7 @@ gsettings set org.gnome.nautilus.preferences show-image-thumbnails always
 gsettings set org.gnome.nautilus.preferences recursive-search always
 
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
-gsettings set org.gnome.desktop.peripherals.mouse speed 1.0
+gsettings set org.gnome.desktop.peripherals.mouse speed 0.0
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 15
 
