@@ -1,0 +1,16 @@
+# SSD
+ACTION!="add", GOTO="end"
+SUBSYSTEM!="block", GOTO="end"
+ATTR{partition}=="*", GOTO="end"
+ATTR{queue/rotational}=="1", GOTO="non_internal_ssd_end"
+KERNEL=="zram[0-9]*", GOTO="non_zram_end"
+
+ATTR{queue/scheduler}="none", ATTR{queue/nr_requests}="128"
+
+LABEL="non_internal_ssd_end"
+ATTR{queue/rq_affinity}="2"
+
+LABEL="non_zram_end"
+ATTR{queue/read_ahead_kb}="512"
+
+LABEL="end"
